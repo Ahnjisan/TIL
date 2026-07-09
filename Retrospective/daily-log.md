@@ -158,3 +158,65 @@ HTML, CSS, JavaScript의 역할도 실습을 통해 정리했다. HTML은 화면
 - JavaScript 이벤트 처리 방식 추가 정리하기
 - DOM 조작 방식 복습하기
 - 간단한 로그인 화면 코드를 직접 다시 작성해보기
+
+
+## 2026-07-09
+
+### 오늘 학습한 내용
+
+- Git의 개념
+- 버전 관리가 필요한 이유
+- 분산 버전 관리 시스템
+- Git과 GitHub의 차이
+- 로컬 저장소와 원격 저장소의 차이
+- CLI와 GUI 방식
+- SourceTree의 역할
+- Git 설치 및 버전 확인
+- Git 사용자 이름과 이메일 설정
+- 기본 브랜치 이름 설정
+- `git init`의 역할
+- `.git` 폴더의 의미
+- `git status`의 역할
+- `git add`와 Staging Area
+- `git commit`의 역할
+- `git log`를 통한 커밋 이력 확인
+
+### 오늘 정리한 문서
+
+- [버전 관리란?](../Git-GitHub/01-version-control.md)
+- [Git 설치 및 초기 세팅](../Git-GitHub/02-install-and-setting.md)
+
+### 핵심 요약
+
+Git은 소스 코드의 변경 이력을 관리하기 위한 분산 버전 관리 시스템이다. 개발 프로젝트에서는 여러 사람이 함께 코드를 수정하기 때문에, 누가 어떤 내용을 수정했는지 기록하고 필요할 때 이전 상태로 되돌릴 수 있는 버전 관리가 중요하다.
+
+Git과 GitHub는 서로 다른 개념이다. Git은 로컬 환경에서 코드의 변경 이력을 관리하는 도구이고, GitHub는 Git으로 관리되는 코드를 온라인 저장소에 올려 공유하고 협업할 수 있게 해주는 플랫폼이다.
+
+Git은 인터넷이 없어도 로컬에서 사용할 수 있지만, GitHub는 원격 저장소를 사용하는 온라인 플랫폼이기 때문에 인터넷이 필요하다. GitHub에서는 Repository, Fork, Pull Request, Issue, Actions 같은 기능을 통해 협업과 자동화를 지원한다.
+
+Git을 처음 사용하기 위해서는 사용자 이름과 이메일을 설정해야 한다. 이 정보는 커밋 작성자 정보로 사용된다. 또한 최근에는 기본 브랜치 이름으로 `master`보다 `main`을 많이 사용하기 때문에, `git config --global init.defaultBranch main` 명령어로 기본 브랜치 이름을 설정할 수 있다.
+
+Git의 기본 흐름은 파일 수정 → 상태 확인 → 스테이징 → 커밋 → 이력 확인 순서로 진행된다. `git add`는 변경 사항을 Staging Area에 올리는 과정이고, `git commit`은 스테이징된 변경 사항을 하나의 버전으로 기록하는 과정이다.
+
+### 헷갈린 부분
+
+- Git과 GitHub의 차이
+- 로컬 저장소와 원격 저장소의 차이
+- CLI 방식과 GUI 방식의 차이
+- SourceTree가 Git에서 어떤 역할을 하는지
+- `git config --global`에서 `--global`의 의미
+- `git init`을 실행했을 때 생성되는 `.git` 폴더의 역할
+- `git add`와 `git commit`의 차이
+- Staging Area가 필요한 이유
+- `Untracked files`의 의미
+- Commit Hash가 어떤 역할을 하는지
+- Branch가 왜 필요한지
+
+### 다음 학습 계획
+
+- `git status`, `git add`, `git commit`, `git log` 명령어 반복 실습하기
+- Staging Area의 역할을 예시로 다시 정리하기
+- Commit 메시지 작성 규칙 정리하기
+- Branch의 개념과 사용 흐름 학습하기
+- GitHub 원격 저장소 연결 방식 정리하기
+- `push`, `pull`, `clone` 명령어 학습하기
