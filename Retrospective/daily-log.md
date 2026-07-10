@@ -220,3 +220,66 @@ Git의 기본 흐름은 파일 수정 → 상태 확인 → 스테이징 → 커
 - Branch의 개념과 사용 흐름 학습하기
 - GitHub 원격 저장소 연결 방식 정리하기
 - `push`, `pull`, `clone` 명령어 학습하기
+
+## 2026-07-10
+
+### 오늘 학습한 내용
+
+- SourceTree를 이용한 Git 이력 확인
+- `.git` 폴더의 역할
+- 커밋 이력과 Commit Hash
+- 파일 추가, 수정, 삭제 상태 확인
+- `git status`로 Git 상태 확인하기
+- `git add .`와 `git add 파일명`의 차이
+- `git commit -m`과 `git commit -am`의 차이
+- `git log`를 통한 커밋 이력 확인
+- `git reset`의 개념
+- `git revert`의 개념
+- reset과 revert의 차이
+- Branch의 개념
+- main 브랜치의 역할
+- 브랜치 생성, 이동, 삭제 명령어
+- `git switch -c`를 이용한 브랜치 생성 및 이동
+- `git branch -d`와 `git branch -D`의 차이
+
+### 오늘 정리한 문서
+
+- [Commit 이해하기](../Git-GitHub/03-commit.md)
+- [Branch의 개념과 활용](../Git-GitHub/04-branch.md)
+
+### 핵심 요약
+
+오늘은 Git에서 커밋 이력을 확인하고, 변경 사항을 추가로 기록하는 방법을 학습했다. SourceTree를 사용하면 CLI에서 `git log`로 확인하던 커밋 이력을 그래프 형태로 볼 수 있어 Git의 시간 흐름을 더 직관적으로 이해할 수 있다.
+
+Git은 파일의 상태를 Untracked, Modified, Deleted, Staged 등으로 구분해서 관리한다. 새 파일은 Untracked 상태로 표시되고, 기존 파일을 수정하면 Modified, 삭제하면 Deleted 상태로 표시된다. 이러한 변경 사항은 `git add`를 통해 Staging Area에 올린 뒤, `git commit`으로 하나의 버전으로 기록한다.
+
+`git commit -m`은 Staging Area에 올라간 변경 사항을 커밋할 때 사용한다. 반면 `git commit -am`은 이미 Git이 추적 중인 파일의 수정이나 삭제를 add와 commit까지 한 번에 처리할 수 있다. 다만 새로 생성된 Untracked 파일은 `git commit -am`으로 처리할 수 없기 때문에 반드시 `git add`를 먼저 해야 한다.
+
+또한 Git에서 과거로 되돌아가는 방법으로 `reset`과 `revert`를 학습했다. `reset`은 특정 커밋으로 돌아가면서 이후 이력을 삭제할 수 있는 방식이고, `revert`는 기존 이력을 유지한 채 특정 커밋의 변경 사항을 취소하는 새 커밋을 만드는 방식이다.
+
+마지막으로 Branch의 개념을 정리했다. Branch는 하나의 프로젝트 안에서 작업 흐름을 나누기 위한 독립적인 작업 공간이다. main 브랜치를 안정적으로 유지하면서 새로운 기능 개발이나 테스트 작업을 별도 브랜치에서 진행할 수 있다.
+
+### 헷갈린 부분
+
+- SourceTree에서 보이는 커밋 그래프의 의미
+- `.git` 폴더를 삭제했을 때 Git 이력이 사라지는 이유
+- Untracked, Modified, Deleted, Staged 상태의 차이
+- `git add .`와 `git add 파일명`을 언제 구분해서 써야 하는지
+- `git commit -m`과 `git commit -am`의 차이
+- 새 파일이 있을 때 `git commit -am`을 사용할 수 없는 이유
+- Commit Hash가 특정 커밋을 식별하는 방식
+- `git log` 화면에서 `q`로 빠져나오는 방식
+- `git reset --hard`가 실제 파일 상태까지 되돌리는 의미
+- `reset`과 `revert`의 차이
+- Branch가 왜 독립적인 작업 공간인지
+- `git branch -d`와 `git branch -D`의 차이
+
+### 다음 학습 계획
+
+- `git status`, `git add`, `git commit`, `git log` 반복 실습하기
+- SourceTree에서 커밋 이력과 변경 파일 확인해보기
+- `git reset --hard`와 `git revert`의 차이를 예시로 다시 정리하기
+- Branch 생성과 이동 명령어 직접 실습하기
+- `git switch -c 브랜치명` 명령어 익숙해지기
+- main 브랜치와 feature 브랜치의 관계 정리하기
+- 이후 Merge와 Pull Request 개념 학습하기
