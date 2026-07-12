@@ -283,3 +283,67 @@ Git은 파일의 상태를 Untracked, Modified, Deleted, Staged 등으로 구분
 - `git switch -c 브랜치명` 명령어 익숙해지기
 - main 브랜치와 feature 브랜치의 관계 정리하기
 - 이후 Merge와 Pull Request 개념 학습하기
+
+
+## 2026-07-12
+
+### 오늘 학습한 내용
+
+- Git 브랜치 생성과 이동
+- 여러 브랜치에서 독립적으로 작업하는 흐름
+- SourceTree를 이용한 브랜치 흐름 확인
+- `git log --all --decorate --oneline --graph` 명령어
+- Merge의 개념
+- Rebase의 개념
+- Fast-forward의 의미
+- Merge와 Rebase의 차이
+- 병합 완료 후 브랜치 삭제
+- Merge Conflict의 개념
+- Conflict 발생 상황
+- Conflict 해결 흐름
+- 원격 저장소의 개념
+- 로컬 저장소와 원격 저장소의 차이
+- `git remote`, `git push`, `git pull`, `git clone`의 역할
+- Pull Request 기반 협업 흐름
+
+### 오늘 정리한 문서
+
+- [Merge, Rebase, Conflict 이해하기](../Git-GitHub/05-merge-conflict.md)
+- [Remote Repository 이해하기](../Git-GitHub/06-remote-repository.md)
+
+### 핵심 요약
+
+오늘은 Git에서 브랜치를 생성하고, 서로 다른 브랜치에서 작업한 내용을 하나로 합치는 방법을 학습했다. 브랜치는 하나의 프로젝트 안에서 독립적인 작업 공간을 만드는 기능이다. main 브랜치를 안정적으로 유지하면서 새로운 기능 개발이나 테스트 작업을 별도 브랜치에서 진행할 수 있다.
+
+브랜치를 합치는 방법에는 Merge와 Rebase가 있다. Merge는 두 브랜치를 병합 커밋으로 합치는 방식이며, 브랜치의 작업 흐름이 이력에 남는다. Rebase는 한 브랜치의 커밋을 다른 브랜치 뒤에 이어 붙이는 방식이며, 커밋 이력을 한 줄로 깔끔하게 정리할 수 있다.
+
+Rebase 이후에는 main 브랜치의 위치를 최신 커밋으로 이동시키기 위해 Fast-forward가 발생할 수 있다. Fast-forward는 새로운 병합 커밋을 만들지 않고 브랜치 포인터만 앞으로 이동하는 방식이다.
+
+브랜치를 병합하는 과정에서는 Conflict가 발생할 수 있다. Conflict는 서로 다른 브랜치에서 같은 파일의 같은 부분을 수정했을 때 Git이 자동으로 병합하지 못하는 상황이다. 이 경우 개발자가 직접 파일을 열어 어떤 내용을 남길지 결정하고, 충돌 표시를 제거한 뒤 다시 add와 commit을 해야 한다.
+
+또한 원격 저장소의 개념도 함께 정리했다. Git은 로컬에서 버전 관리를 수행하는 도구이고, GitHub는 Git 저장소를 온라인에서 관리하고 협업할 수 있도록 도와주는 플랫폼이다. 로컬 저장소의 커밋을 GitHub에 올릴 때는 push를 사용하고, GitHub의 변경 사항을 로컬로 가져올 때는 pull 또는 clone을 사용한다.
+
+### 헷갈린 부분
+
+- 브랜치가 독립적인 작업 공간이라는 의미
+- SourceTree에서 브랜치가 분기되는 그래프를 해석하는 방법
+- `git log --all --decorate --oneline --graph` 옵션의 의미
+- Merge와 Rebase의 차이
+- Rebase 이후 Fast-forward가 필요한 이유
+- 병합이 끝난 브랜치를 삭제해도 작업 내용이 사라지지 않는 이유
+- Conflict가 발생하는 정확한 상황
+- Conflict 표시에서 `HEAD`가 의미하는 것
+- Conflict 해결 후 `git add`를 다시 해야 하는 이유
+- 로컬 저장소와 원격 저장소의 차이
+- `git push`, `git pull`, `git fetch`, `git clone`의 차이
+- Pull Request가 필요한 이유
+
+### 다음 학습 계획
+
+- Merge와 Rebase 명령어 직접 반복 실습하기
+- SourceTree에서 병합 커밋과 Rebase 결과 비교하기
+- Conflict 상황을 직접 만들어보고 해결해보기
+- `git remote -v`로 원격 저장소 연결 상태 확인하기
+- 로컬 저장소와 GitHub 원격 저장소 연결 실습하기
+- `git push`, `git pull`, `git clone` 명령어 실습하기
+- Pull Request 기반 협업 흐름 정리하기
