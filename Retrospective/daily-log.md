@@ -347,3 +347,71 @@ Rebase 이후에는 main 브랜치의 위치를 최신 커밋으로 이동시키
 - 로컬 저장소와 GitHub 원격 저장소 연결 실습하기
 - `git push`, `git pull`, `git clone` 명령어 실습하기
 - Pull Request 기반 협업 흐름 정리하기
+
+## 2026-07-13
+
+### 오늘 학습한 내용
+
+- Git 충돌이 발생하는 상황
+- Merge Conflict 해결 방법
+- Rebase Conflict 해결 방법
+- Current Change와 Incoming Change의 의미
+- `git merge --abort`의 역할
+- `git rebase --continue`의 역할
+- `git rebase --abort`의 역할
+- Git과 GitHub의 차이
+- 로컬 저장소와 원격 저장소의 차이
+- GitHub Repository 생성과 게시
+- VS Code에서 GitHub로 프로젝트 올리기
+- `git remote -v`로 원격 저장소 확인하기
+- `origin`의 의미
+- `git push`의 역할
+- `git pull`의 역할
+- `git clone`의 역할
+- push 전에 pull이 필요한 상황
+- GitHub 협업 시나리오
+- Pull Request 기반 협업 흐름
+
+### 오늘 정리한 문서
+
+- [Push와 Pull 이해하기](../Git-GitHub/07-push-pull.md)
+- [GitHub 협업 시나리오 정리](../Git-GitHub/08-collaboration-scenario.md)
+
+### 핵심 요약
+
+오늘은 Git에서 충돌이 발생하는 상황과 GitHub 원격 저장소를 사용하는 흐름을 학습했다. 충돌은 서로 다른 브랜치에서 같은 파일의 같은 부분을 다르게 수정했을 때 발생한다. Git은 어떤 내용을 최종 결과로 선택해야 하는지 자동으로 판단할 수 없기 때문에 개발자가 직접 충돌을 해결해야 한다.
+
+Merge 과정에서 충돌이 발생하면 충돌 파일을 수정한 뒤 `git add`와 `git commit`을 통해 병합을 완료한다. 반면 Rebase 과정에서 충돌이 발생하면 충돌 파일을 수정하고 `git add`를 한 뒤 `git rebase --continue`를 실행해야 한다. 해결이 어렵다면 merge는 `git merge --abort`, rebase는 `git rebase --abort`로 중단할 수 있다.
+
+또한 GitHub 원격 저장소를 사용하는 방법을 정리했다. Git은 로컬에서 버전 관리를 수행하는 도구이고, GitHub는 Git 저장소를 온라인에서 관리하고 협업할 수 있도록 도와주는 플랫폼이다. 로컬에서 만든 커밋을 GitHub에 반영하려면 `git push`를 사용하고, GitHub의 변경 사항을 로컬로 가져오려면 `git pull`을 사용한다.
+
+협업에서는 로컬 저장소와 원격 저장소의 상태를 계속 맞추는 것이 중요하다. 원격 저장소에 내 로컬에는 없는 최신 커밋이 존재하는 상태에서 바로 push를 시도하면 push가 거부될 수 있다. 이 경우 먼저 pull을 통해 원격 변경 사항을 가져온 뒤 다시 push해야 한다.
+
+마지막으로 GitHub 협업 흐름을 정리했다. 일반적으로 main 브랜치에서 직접 작업하지 않고, 기능별 브랜치를 생성해 작업한 뒤 push하고 Pull Request를 생성한다. 이후 코드 리뷰를 거쳐 main 브랜치에 병합하는 방식이 안정적인 협업 흐름이다.
+
+### 헷갈린 부분
+
+- Merge Conflict와 Rebase Conflict의 차이
+- Current Change와 Incoming Change의 기준
+- `HEAD`가 현재 브랜치를 의미한다는 점
+- Merge 충돌 해결 후에는 `git commit`을 해야 하는 점
+- Rebase 충돌 해결 후에는 `git rebase --continue`를 해야 하는 점
+- `git merge --abort`와 `git rebase --abort`의 차이
+- Git과 GitHub의 역할 차이
+- 로컬 저장소와 원격 저장소의 차이
+- `origin`이 기본 원격 저장소 이름이라는 점
+- `git push`와 `git pull`의 방향 차이
+- 원격 저장소에 최신 커밋이 있을 때 push가 거부되는 이유
+- pull 과정에서도 충돌이 발생할 수 있다는 점
+- Pull Request가 단순 병합 요청이 아니라 코드 리뷰 흐름이라는 점
+
+### 다음 학습 계획
+
+- Merge Conflict 상황 직접 만들어보고 해결하기
+- Rebase Conflict 해결 흐름 다시 실습하기
+- `git remote -v` 결과 해석 연습하기
+- GitHub 원격 저장소에 직접 push 해보기
+- GitHub에서 수정한 내용을 로컬로 pull 해보기
+- push 거부 상황을 예시로 다시 정리하기
+- Pull Request 생성 흐름 정리하기
+- 협업 시 main 브랜치와 feature 브랜치 운영 방식 복습하기
