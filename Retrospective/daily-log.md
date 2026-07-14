@@ -415,3 +415,77 @@ Merge 과정에서 충돌이 발생하면 충돌 파일을 수정한 뒤 `git ad
 - push 거부 상황을 예시로 다시 정리하기
 - Pull Request 생성 흐름 정리하기
 - 협업 시 main 브랜치와 feature 브랜치 운영 방식 복습하기
+
+## 2026-07-14
+
+### 오늘 학습한 내용
+
+- Java를 배우는 이유
+- Python과 Java의 사용 분야 차이
+- Java와 백엔드 개발의 관계
+- Spring Boot와 Java의 관계
+- 객체 지향 프로그래밍의 개념
+- Class와 Instance의 차이
+- Variable과 Method의 역할
+- JDK, JRE, JVM의 관계
+- JVM과 플랫폼 독립성
+- JDK 17 설치 흐름
+- `JAVA_HOME` 환경 변수 설정
+- PATH 환경 변수와 JDK `bin` 경로
+- `java`와 `javac` 명령어
+- Java 소스 코드 컴파일 과정
+- `.java`, `.class`, Bytecode의 관계
+- Java 대소문자 구분
+- Java 식별자 네이밍 규칙
+- VS Code Java 확장 설치
+- `GreetingApp.java` 작성과 실행
+- `main` 메서드의 역할
+- `System.out.println()` 출력문
+
+### 오늘 정리한 문서
+
+- [Java 개발 환경 세팅](../Java/01-environment-setting.md)
+- [Java 변수와 기본 구조](../Java/02-variable-and-type.md)
+
+### 핵심 요약
+
+오늘은 Java 학습을 시작하면서 Java가 어떤 분야에서 사용되는지와 개발 환경을 어떻게 구성하는지 학습했다.
+
+Python은 인공지능과 데이터 분석 분야에서 많이 사용되고, Java는 백엔드와 기업 시스템에서 많이 사용된다. 특히 국내 공공기관, 금융권, 기업 내부 시스템에서는 Java 기반 백엔드가 많이 사용되며, Spring Boot는 Java 기반 웹 애플리케이션을 만들 때 사용하는 대표적인 프레임워크이다.
+
+Java는 객체 지향 프로그래밍 언어이다. 객체 지향에서는 현실 세계의 객체를 프로그램 안에서 표현하기 위해 Class를 사용한다. Class는 객체를 만들기 위한 설계도이고, Class를 바탕으로 실제 프로그램 안에서 생성된 객체를 Instance라고 한다. 객체의 명사적인 특징은 Variable로 표현하고, 동작이나 행위는 Method로 표현한다.
+
+Java 개발을 위해서는 JDK가 필요하다. JDK는 Java Development Kit의 약자이며, Java 개발에 필요한 도구를 포함한다. JDK 안에는 Java 실행 환경인 JRE가 포함되고, Java 프로그램은 JVM 위에서 실행된다. JVM이 설치된 환경이라면 운영체제에 관계없이 Java 프로그램을 실행할 수 있다는 점에서 Java는 플랫폼 독립성을 가진다.
+
+개발 환경 세팅에서는 Eclipse Adoptium의 Temurin JDK 17을 설치하고, `JAVA_HOME` 환경 변수와 PATH 설정을 확인했다. PATH에 JDK의 `bin` 경로가 등록되어 있어야 터미널에서 `java`, `javac` 명령어를 사용할 수 있다.
+
+또한 VS Code에서 Java Extension Pack을 설치하고 `GreetingApp.java` 파일을 작성했다. Java에서는 public class 이름과 파일 이름이 같아야 하며, 프로그램은 `main` 메서드에서 실행을 시작한다. `System.out.println()`을 사용하면 콘솔에 문자열을 출력할 수 있다.
+
+### 헷갈린 부분
+
+- Java와 Python의 사용 분야 차이
+- Java가 백엔드에서 많이 사용되는 이유
+- 객체 지향 프로그래밍의 정확한 의미
+- Class와 Instance의 차이
+- Variable과 Method의 차이
+- JDK, JRE, JVM의 포함 관계
+- JVM 위에서 Java 프로그램이 실행된다는 의미
+- `JAVA_HOME`을 설정하는 이유
+- PATH에 JDK `bin` 경로가 필요한 이유
+- `javac`와 `java` 명령어의 차이
+- `.java` 파일과 `.class` 파일의 차이
+- Bytecode가 JVM에서 실행된다는 의미
+- Java가 대소문자를 구분한다는 점
+- public class 이름과 파일 이름이 같아야 하는 이유
+- `main` 메서드가 실행 시작점이라는 의미
+
+### 다음 학습 계획
+
+- Java 변수 선언과 초기화 문법 복습하기
+- Java 기본 자료형 정리하기
+- `int`, `double`, `boolean`, `char`, `String` 차이 정리하기
+- Class와 Instance 예시 직접 작성해보기
+- `javac`와 `java` 명령어로 직접 컴파일과 실행 실습하기
+- VS Code에서 Java 파일 생성과 실행 반복하기
+- Java 네이밍 규칙 다시 정리하기
+- main 메서드 구조 암기하기
