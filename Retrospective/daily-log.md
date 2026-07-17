@@ -560,3 +560,80 @@ Java 개발을 위해서는 JDK가 필요하다. JDK는 Java Development Kit의 
 - 매개변수와 반환값이 있는 메서드 직접 만들어보기
 - 배열을 매개변수로 받는 메서드 작성해보기
 - `return`이 있는 메서드와 `void` 메서드의 차이 복습하기
+
+## 2026-07-18
+
+### 오늘 학습한 내용
+
+- Class와 Instance의 차이
+- Class를 만드는 이유
+- Instance를 생성해야 하는 이유
+- Class의 구성 요소
+- 변수와 메서드의 소유 주체
+- `new` 키워드를 이용한 객체 생성
+- Class 타입 변수와 참조 타입
+- 참조 변수와 객체 주소 값
+- dot operator를 이용한 변수와 메서드 접근
+- 메서드는 호출되어야 실행된다는 점
+- 반환 타입이 있는 메서드와 `return`
+- main 메서드가 없는 Class의 역할
+- 여러 Class가 함께 동작하는 구조
+- Package의 개념
+- Import의 역할
+- Spring 기반 백엔드 계층 구조
+- Controller, Service, Repository의 역할
+- DAO, DTO, VO, Entity의 개념
+- Frontend, Backend, Database 요청 처리 흐름
+- Class 간 의존 관계
+- Cohesion과 Coupling의 의미
+
+### 오늘 정리한 문서
+
+- [Java 객체 지향 기본 개념](../Java/05-oop-basic.md)
+- [Java Class, Instance와 프로젝트 구조](../Java/06-class-instance.md)
+
+### 핵심 요약
+
+오늘은 Java의 객체 지향 개념 중 Class와 Instance의 차이를 집중적으로 학습했다. Class는 Instance를 만들기 위한 템플릿이고, Instance는 Class를 기반으로 메모리에 실제로 생성된 객체이다. 따라서 Class 자체와 Instance를 같은 의미로 사용하면 안 된다.
+
+Class 안에는 변수와 메서드를 정의할 수 있다. 하지만 중요한 점은 Class에 정의된 변수와 메서드가 Class 자체의 소유가 아니라 Instance의 소유라는 점이다. 따라서 외부 클래스에서 특정 Class의 변수나 메서드에 접근하려면 먼저 `new` 키워드를 사용해 Instance를 생성해야 한다.
+
+`Teacher teacher = new Teacher();`와 같은 코드는 Class 타입의 참조 변수를 선언하고, `new Teacher()`를 통해 생성된 Instance의 주소 값을 그 변수에 저장하는 구조이다. 이후 `teacher.name`, `teacher.eating()`처럼 dot operator를 사용해 Instance가 가진 변수와 메서드에 접근할 수 있다.
+
+또한 실제 Java 프로젝트에서는 하나의 Class만으로 프로그램을 구성하지 않는다는 점을 학습했다. 여러 Class가 각자의 역할을 가지고 함께 동작하며, 프로젝트가 커질수록 Class를 역할별 Package로 나누어 관리한다. 서로 다른 Package에 있는 Class를 사용하려면 `import`가 필요하다.
+
+Spring 기반 백엔드 프로젝트에서는 보통 Controller, Service, Repository 계층으로 역할을 나눈다. Controller는 프론트엔드 요청을 받고 흐름을 제어하며, Service는 비즈니스 로직을 처리한다. Repository 또는 DAO는 데이터베이스 접근을 담당하고, DTO는 계층 간 데이터를 전달하는 데 사용된다. Entity는 데이터베이스 테이블과 매핑되는 객체로 볼 수 있다.
+
+마지막으로 좋은 설계에서는 높은 응집도와 낮은 결합도를 지향한다는 점을 정리했다. 하나의 Class는 자신의 역할에 집중해야 하고, 다른 Class와는 필요한 만큼만 연결되어야 유지보수하기 좋은 구조가 된다.
+
+### 헷갈린 부분
+
+- Class와 Instance의 정확한 차이
+- Class를 Instance라고 부르면 안 되는 이유
+- Class에 정의된 변수와 메서드가 Instance의 소유라는 의미
+- `new` 키워드가 실제로 하는 일
+- Class 타입 변수가 참조 타입이라는 점
+- 참조 변수가 객체의 주소 값을 가진다는 의미
+- dot operator로 변수와 메서드에 접근하는 방식
+- 메서드는 정의만으로 실행되지 않고 호출되어야 실행된다는 점
+- 반환 타입이 있는 메서드에서 `return`이 필요한 이유
+- main 메서드가 없는 Class가 필요한 이유
+- Package와 폴더 구조의 관계
+- 다른 Package의 Class를 사용할 때 `import`가 필요한 이유
+- Controller, Service, Repository의 역할 차이
+- DTO, VO, Entity의 차이
+- Class 간 의존 관계의 의미
+- Cohesion과 Coupling의 차이
+
+### 다음 학습 계획
+
+- `Teacher`와 `TeacherApp` 예제 직접 다시 작성하기
+- `new` 키워드로 Instance를 생성하는 코드 반복 연습하기
+- 참조 변수와 dot operator 사용법 복습하기
+- 반환 타입이 있는 메서드와 없는 메서드 예제 작성하기
+- main 메서드가 있는 Class와 없는 Class 구분하기
+- Package를 직접 만들고 Class를 역할별로 나누어보기
+- `import`를 사용해 다른 Package의 Class 참조해보기
+- Controller, Service, Repository 흐름 다시 정리하기
+- DTO와 Entity의 역할 차이 복습하기
+- 응집도와 결합도 개념을 예시로 다시 정리하기
