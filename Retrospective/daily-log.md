@@ -637,3 +637,79 @@ Spring 기반 백엔드 프로젝트에서는 보통 Controller, Service, Reposi
 - Controller, Service, Repository 흐름 다시 정리하기
 - DTO와 Entity의 역할 차이 복습하기
 - 응집도와 결합도 개념을 예시로 다시 정리하기
+
+## 2026-07-20
+
+### 오늘 학습한 내용
+
+- React의 기본 개념
+- React가 JavaScript 라이브러리인 이유
+- Library와 Framework의 차이
+- Component 기반 개발 방식
+- Component의 재사용성
+- Component의 독립성
+- Props의 개념
+- Component와 Element의 차이
+- Rendering의 의미
+- React와 SPA 구조
+- Function Component의 개념
+- Node.js 설치 흐름
+- npm, npx, CRA의 역할
+- Git Bash를 이용한 React 프로젝트 생성
+- `npx create-react-app` 명령어
+- React 프로젝트 기본 구조
+- `public/index.html`의 역할
+- `src/index.js`의 역할
+- `src/App.js`의 역할
+- JSX의 기본 개념
+- import와 export
+- Virtual DOM의 기본 흐름
+- `npm start`를 이용한 개발 서버 실행
+
+### 오늘 정리한 문서
+
+- [React 소개 및 기본 개념](../React/01-introduction-setting.md)
+- [React JSX와 프로젝트 구조](../React/02-jsx.md)
+
+### 핵심 요약
+
+오늘은 React의 기본 개념과 개발 환경 세팅 과정을 학습했다. React는 사용자 인터페이스를 만들기 위한 JavaScript 라이브러리이다. 프레임워크와 달리 개발자가 필요한 기능을 호출하고 조합하는 방식으로 사용할 수 있으며, 화면을 Component 단위로 나누어 개발한다.
+
+Component는 화면을 구성하는 독립적인 UI 조각이다. React에서는 여러 Component를 조립해서 하나의 웹 페이지를 만들 수 있다. Component에 전달되는 속성 값을 Props라고 하며, Component는 Props를 바탕으로 실제 화면에 렌더링될 Element를 만든다. 즉, Component는 화면을 만들기 위한 틀이고, Element는 Component로부터 생성되어 브라우저에 표시되는 결과물이다.
+
+React는 SPA 방식으로 동작한다. 기본 HTML 파일은 하나이고, JavaScript가 root 영역에 Component 결과를 렌더링한다. `public/index.html`에는 `<div id="root"></div>`가 있고, `src/index.js`는 이 root 영역을 찾아 App Component를 렌더링한다. `src/App.js`는 기본 App Component를 정의하는 파일이다.
+
+React 개발 환경을 구성하기 위해서는 Node.js가 필요하다. Node.js를 설치하면 npm도 함께 설치된다. npm은 패키지 관리 도구이고, npx는 특정 패키지를 실행해 프로젝트 생성 같은 작업을 도와준다. CRA 방식에서는 `npx create-react-app 프로젝트명` 명령어를 사용해 React 프로젝트를 생성할 수 있다.
+
+또한 JSX의 기본 개념을 정리했다. JSX는 JavaScript 안에서 HTML처럼 UI 구조를 작성할 수 있게 해주는 문법이다. Component는 JSX를 반환하고, React는 그 결과를 Element로 만들어 브라우저에 렌더링한다. JSX는 HTML과 비슷하지만, 여러 요소를 하나의 부모 요소로 감싸야 하고, JavaScript 값을 사용할 때는 `{}`를 사용하며, CSS class는 `className`으로 작성해야 한다.
+
+### 헷갈린 부분
+
+- React가 라이브러리로 분류되는 이유
+- Library와 Framework의 차이
+- Component와 Element의 차이
+- Props가 Component에 전달되는 방식
+- Component의 재사용성이 독립성과 관련되는 이유
+- Rendering의 정확한 의미
+- SPA에서 HTML 파일이 하나라는 의미
+- Function Component와 일반 JavaScript 함수의 차이
+- Node.js가 React 개발에 필요한 이유
+- npm, npx, CRA의 차이
+- `public/index.html`과 `src/index.js`의 연결 흐름
+- `App.js`가 Component 파일이라는 점
+- JSX가 HTML과 완전히 같지는 않다는 점
+- JSX에서 하나의 부모 요소가 필요한 이유
+- JSX에서 `class` 대신 `className`을 사용하는 이유
+- `npm start`가 개발 서버를 실행한다는 점
+
+### 다음 학습 계획
+
+- React 프로젝트를 직접 생성해보기
+- `npm start`로 개발 서버 실행해보기
+- `public/index.html`의 root 영역 확인하기
+- `src/index.js`에서 App Component가 렌더링되는 흐름 다시 보기
+- `App.js` 내용을 수정하고 브라우저에 반영되는지 확인하기
+- JSX 문법으로 간단한 화면 작성해보기
+- Component와 Element의 차이를 예시로 다시 정리하기
+- Props를 전달받는 Component 예제 작성해보기
+- React 프로젝트 폴더 구조 복습하기
