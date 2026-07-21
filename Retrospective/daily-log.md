@@ -713,3 +713,91 @@ React 개발 환경을 구성하기 위해서는 Node.js가 필요하다. Node.j
 - Component와 Element의 차이를 예시로 다시 정리하기
 - Props를 전달받는 Component 예제 작성해보기
 - React 프로젝트 폴더 구조 복습하기
+
+## 2026-07-21
+
+### 오늘 학습한 내용
+
+- React Component 생성 흐름
+- `.jsx` 파일의 역할
+- `components/page` 폴더 구조
+- `Login.jsx` Component 작성
+- CSS 파일 import 방식
+- JSX에서 `className`을 사용하는 이유
+- Props의 개념
+- Component와 Element의 관계
+- `useState`를 이용한 상태 관리
+- input 값과 State 연결
+- `onChange` 이벤트 처리
+- `onSubmit` 이벤트 처리
+- `event.preventDefault()`의 역할
+- 로그인 입력값 Validation
+- 에러 메시지 State 관리
+- Axios 설치와 API 요청 구조
+- `async`, `await`를 이용한 비동기 처리
+- 로그인 성공 시 token 저장 흐름
+- React Router DOM 설치
+- `App.js`에서 Router 설정
+- `BrowserRouter`, `Routes`, `Route`의 역할
+- `useNavigate`를 이용한 페이지 이동
+- `useLocation`을 이용한 전달 state 수신
+- `Welcome.jsx` Component 작성
+- Inline Style 적용 방식
+- 로그아웃 이벤트 처리
+
+### 오늘 정리한 문서
+
+- [React Component와 Props](../React/03-component-props.md)
+- [React State와 생명주기 기본 흐름](../React/04-state-lifecycle.md)
+- [React Event 처리와 Router 활용](../React/05-event-handling.md)
+
+### 핵심 요약
+
+오늘은 React에서 실제 Component를 만들고, State와 Event를 연결하는 흐름을 학습했다. React는 Component 기반으로 화면을 구성하며, Component는 `.jsx` 파일로 만들 수 있다. JSX는 JavaScript 안에서 HTML처럼 화면 구조를 작성할 수 있게 해주는 문법이다.
+
+`Login.jsx` Component를 만들면서 화면 구조, CSS 적용, 이벤트 처리, 상태 관리가 하나의 Component 안에서 어떻게 연결되는지 확인했다. JSX에서는 일반 HTML의 `class` 대신 `className`을 사용하고, CSS 파일은 import해서 Component에 적용할 수 있다.
+
+State는 Component 내부에서 관리되는 상태 값이다. 로그인 화면에서는 아이디, 비밀번호, 에러 메시지를 State로 관리할 수 있다. 사용자가 input에 값을 입력하면 `onChange` 이벤트가 발생하고, 상태 변경 함수를 통해 State 값이 변경된다. State가 변경되면 React는 Component를 다시 렌더링하여 변경된 값을 화면에 반영한다.
+
+로그인 버튼을 누르면 form의 `onSubmit` 이벤트가 발생한다. 이때 `event.preventDefault()`를 사용해 form의 기본 새로고침 동작을 막고, 직접 로그인 검증 로직을 실행한다. 입력값이 비어 있으면 에러 메시지를 State에 저장하고, 입력값이 정상이라면 임시 로그인 검증 또는 백엔드 API 요청을 진행할 수 있다.
+
+백엔드와 통신할 때는 Axios를 사용할 수 있다. Axios는 HTTP 요청과 응답을 도와주는 라이브러리이며, 로그인 요청에서는 아이디와 비밀번호를 JSON 형식으로 백엔드에 전달할 수 있다. 비동기 통신에서는 `async`와 `await`를 사용해 서버 응답을 기다린 뒤 다음 로직을 실행할 수 있다.
+
+또한 React Router DOM을 이용해 Component 간 이동을 구현했다. `App.js`에서 `BrowserRouter`, `Routes`, `Route`를 사용해 URL 경로와 Component를 연결하고, 로그인 성공 시 `useNavigate`를 이용해 Welcome 페이지로 이동할 수 있다. 이동하면서 state를 전달하면, Welcome Component에서 `useLocation`을 이용해 전달받은 값을 사용할 수 있다.
+
+마지막으로 Welcome Component에서는 Inline Style을 사용해 간단한 스타일을 적용하고, 로그아웃 버튼의 `onClick` 이벤트를 처리해 다시 로그인 페이지로 이동하는 흐름을 확인했다.
+
+### 헷갈린 부분
+
+- Component와 Element의 차이
+- Props가 Component에 전달되는 방식
+- JSX에서 `class` 대신 `className`을 사용하는 이유
+- CSS import 경로 작성 방식
+- `useState`의 구조
+- State가 변경되면 화면이 다시 렌더링되는 흐름
+- input의 `value`와 `onChange`를 함께 사용하는 이유
+- `onSubmit`과 `onClick`의 차이
+- `event.preventDefault()`가 필요한 이유
+- Validation을 State로 처리하는 방식
+- Axios와 Fetch API의 차이
+- `async`와 `await`의 역할
+- JSON 형태로 백엔드에 데이터를 전달하는 방식
+- token을 localStorage에 저장하는 흐름
+- React Router DOM이 필요한 이유
+- `BrowserRouter`, `Routes`, `Route`의 역할 구분
+- `useNavigate`와 `useLocation`의 차이
+- Inline Style을 객체 형태로 작성하는 방식
+
+### 다음 학습 계획
+
+- `Login.jsx` Component 직접 다시 작성하기
+- input 값과 State를 연결하는 코드 반복 연습하기
+- `onChange`, `onSubmit`, `onClick` 이벤트 차이 정리하기
+- `event.preventDefault()`를 제거했을 때 동작 확인하기
+- 에러 메시지를 State로 관리하는 예제 작성하기
+- Axios 요청 구조 다시 정리하기
+- 백엔드 로그인 API가 있다고 가정하고 JSON 요청 코드 작성해보기
+- `App.js`에서 Router 설정 다시 작성하기
+- `useNavigate`로 페이지 이동하는 예제 작성하기
+- `useLocation`으로 전달받은 state를 읽는 예제 작성하기
+- Welcome Component와 로그아웃 버튼 흐름 복습하기
